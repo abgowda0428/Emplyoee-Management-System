@@ -1,1 +1,44 @@
 <p>roles works!</p>
+<div class="div">
+    <div class="row3" style="background-color: brown;"><p>{{first_name}}</p></div>
+    <div class="row6" style="background-color: aqua;"><p>{{last_name}} ,{{Mobile_number}}</p></div>
+    <div class="row3" style="background-color: blue;"><p>{{isActive}}</p></div>
+</div>
+
+
+<div class="div">
+    <div class="row">
+        <div class="col3"><input type="text" placeholder="Type Here" [value]="first_name" class="form-control"></div>
+        <div class="col3">
+            <input [type]="inputtype">
+        </div>
+    </div>
+</div>
+<div class="div">
+    <input type="text" [(ngModel)]="first_name"/>
+
+</div>
+
+<div>
+    <div class="row" style="background-color: aqua;">{{selectedState}}</div>
+</div>
+
+
+
+<select [(ngModel)]="selectedState">
+    <option value="KA">Karanataka</option>
+    <option value="TN">Tamil Nadu</option>
+    <option value="AP">Andra Pradesh</option>
+</select>
+
+<div class="row">
+    <div class="col3">
+        <button class="btn btn-sucess" (click)="showAlert()">Show Alert</button>
+    </div>
+    <div class="col3">
+        <button class="btn btn-sucess" (click)="showAlerttwo('This is tagruu')">Show Alert Tagruu</button>
+    </div>
+    <div class="col3">
+        <button class="btn btn-sucess" (click)="showAlerttwo('This is abhii')">Show Alert abhi</button>
+    </div>
+</div>
