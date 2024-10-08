@@ -33,12 +33,37 @@
 
 <div class="row">
     <div class="col3">
-        <button class="btn btn-sucess" (click)="showAlert()">Show Alert</button>
+        <button class="btn btn-success" (click)="showAlert()">Show Alert</button>
     </div>
     <div class="col3">
-        <button class="btn btn-sucess" (click)="showAlerttwo('This is tagruu')">Show Alert Tagruu</button>
+        <button class="btn btn-success" (click)="showAlerttwo('This is tagruu')">Show Alert Tagruu</button>
     </div>
     <div class="col3">
-        <button class="btn btn-sucess" (click)="showAlerttwo('This is abhii')">Show Alert abhi</button>
+        <button class="btn btn-success" (click)="showAlerttwo('This is abhii')">Show Alert abhi</button>
+    </div>
+</div>
+
+
+<div class="div">
+    <div class="row">
+        <div class="col-12">
+            <ul>
+                <li *ngFor="let item of roleslist">{{item.role}}</li>
+                <!-- <li *ngFor="let item of roleslist">{{item.roleId}}</li> -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+<div class="row">
+    <div class="col-12 text centre">
+
+        <select>
+            <option *ngFor="let item of roleslist" [value]="item.roleId">{{item.role}}</option>
+        </select>c
+        
+
     </div>
 </div>

@@ -1,0 +1,24 @@
+
+<div class="div">
+    <div class="row">
+        <div class="col-12 text-center">
+            <button type="button" (click)="Changetabs('Roles')" class="btn  btn-lg" [ngClass]="CurrentRoles == 'Roles' ? 'btn-primary' : 'btn-btn-warning'">Large button</button>
+            <button type="button" (click)="Changetabs('Designation')" class="btn  btn-lg" [ngClass]="CurrentRoles == 'Designation' ? 'btn-primary' : 'btn-warning' ">Large button</button>
+        </div>
+    </div>
+</div>
+
+<div class="div">
+    <div class="row">
+        <div class="col-12" *ngIf="CurrentRoles == 'Roles'">
+            <app-roles></app-roles>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" *ngIf="CurrentRoles == 'Designation' ">
+            <app-designation></app-designation>
+
+        </div>
+    </div>
+</div>
